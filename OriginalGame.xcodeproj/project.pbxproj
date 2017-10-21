@@ -17,6 +17,7 @@
 		CC784A2A1F8B416E00AFA945 /* lightning.png in Resources */ = {isa = PBXBuildFile; fileRef = CC784A281F8B416E00AFA945 /* lightning.png */; };
 		CC784A2B1F8B416E00AFA945 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = CC784A291F8B416E00AFA945 /* star.png */; };
 		CC784A2D1F8B417500AFA945 /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = CC784A2C1F8B417500AFA945 /* heart.png */; };
+		CC784A331F8B462B00AFA945 /* OutSideObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC784A321F8B462B00AFA945 /* OutSideObj.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		CC784A281F8B416E00AFA945 /* lightning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lightning.png; sourceTree = "<group>"; };
 		CC784A291F8B416E00AFA945 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
 		CC784A2C1F8B417500AFA945 /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
+		CC784A321F8B462B00AFA945 /* OutSideObj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutSideObj.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,12 +66,12 @@
 		CC784A0C1F8B35F100AFA945 /* OriginalGame */ = {
 			isa = PBXGroup;
 			children = (
-				CC784A1F1F8B3CE400AFA945 /* Images */,
 				CC784A0D1F8B35F100AFA945 /* AppDelegate.swift */,
-				CC784A0F1F8B35F100AFA945 /* ViewController.swift */,
-				CC784A111F8B35F100AFA945 /* Main.storyboard */,
+				CC784A311F8B45D100AFA945 /* Model */,
+				CC784A2F1F8B45C400AFA945 /* View */,
+				CC784A301F8B45CB00AFA945 /* ViewController */,
+				CC784A1F1F8B3CE400AFA945 /* Images */,
 				CC784A141F8B35F100AFA945 /* Assets.xcassets */,
-				CC784A161F8B35F100AFA945 /* LaunchScreen.storyboard */,
 				CC784A191F8B35F100AFA945 /* Info.plist */,
 			);
 			path = OriginalGame;
@@ -85,6 +87,31 @@
 				CC784A201F8B3D3C00AFA945 /* player.png */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		CC784A2F1F8B45C400AFA945 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CC784A111F8B35F100AFA945 /* Main.storyboard */,
+				CC784A161F8B35F100AFA945 /* LaunchScreen.storyboard */,
+				CC784A321F8B462B00AFA945 /* OutSideObj.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CC784A301F8B45CB00AFA945 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CC784A0F1F8B35F100AFA945 /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		CC784A311F8B45D100AFA945 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +193,7 @@
 			files = (
 				CC784A101F8B35F100AFA945 /* ViewController.swift in Sources */,
 				CC784A0E1F8B35F100AFA945 /* AppDelegate.swift in Sources */,
+				CC784A331F8B462B00AFA945 /* OutSideObj.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
