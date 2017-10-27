@@ -8,15 +8,13 @@
 
 import UIKit
 
-class OutSideObj: UIImageView {
+class Enemy : UIImageView {
     
     private var enemyNum:Int = 0
-    private var outSideImages:[String] = ["heart.png", "lightning", "star.png"]
     
-    override init(image: UIImage?) {
-        enemyNum = Int(UInt32(arc4random()) % UInt32(outSideImages.count))
-        let overImage = UIImage(named: outSideImages[enemyNum])
-        super.init(image: overImage)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.image = UIImage(named: "cloud.png")
     }
     
     required init?(coder aDecoder: NSCoder) {

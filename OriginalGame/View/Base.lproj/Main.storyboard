@@ -5,14 +5,15 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OriginalGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="OriginalGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,9 +21,12 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="qLD-aw-ayA">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="player.png" translatesAutoresizingMaskIntoConstraints="NO" id="ScH-I1-XNo">
-                                <rect key="frame" x="67" y="462" width="120" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="player.png" translatesAutoresizingMaskIntoConstraints="NO" id="ScH-I1-XNo">
+                                <rect key="frame" x="128" y="392" width="120" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="i06-Qo-14Y"/>
+                                    <constraint firstAttribute="height" constant="64" id="zVi-0t-uge"/>
+                                </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1OY-8A-giT">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="21"/>
@@ -52,34 +56,94 @@
                                     <constraint firstAttribute="height" constant="1" id="ony-Q6-P5C"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GAME OVER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sj1-6R-Va9">
+                                <rect key="frame" x="16" y="123" width="343" height="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uud-vL-gGg">
+                                <rect key="frame" x="125" y="203" width="126" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="zGd-UX-Rqd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="もう一度"/>
+                                <connections>
+                                    <action selector="returnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yue-Dh-rf7"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.png" translatesAutoresizingMaskIntoConstraints="NO" id="rdr-ja-9ZA" customClass="HelpItem" customModule="OriginalGame" customModuleProvider="target">
+                                <rect key="frame" x="309" y="590" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="2Od-3G-Yu1"/>
+                                    <constraint firstAttribute="height" constant="50" id="QZy-Ag-ITK"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vb2-F6-QuD">
+                                <rect key="frame" x="68" y="81" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="kJC-7t-qlN"/>
+                                    <constraint firstAttribute="width" constant="240" id="lt4-t3-LRO"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart.png" translatesAutoresizingMaskIntoConstraints="NO" id="g0X-kZ-zn2" customClass="HelpItem" customModule="OriginalGame" customModuleProvider="target">
+                                <rect key="frame" x="16" y="590" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="Csc-Ts-eSw"/>
+                                    <constraint firstAttribute="height" constant="50" id="ccw-kU-hKL"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="MrT-42-YUk" firstAttribute="leading" secondItem="rdr-ja-9ZA" secondAttribute="trailing" constant="15" id="3Nt-xL-ksw"/>
                             <constraint firstItem="qLD-aw-ayA" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="3f7-Cd-IOW"/>
                             <constraint firstAttribute="bottom" secondItem="MrT-42-YUk" secondAttribute="bottom" id="8Hy-WG-A1m"/>
                             <constraint firstItem="MrT-42-YUk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Bea-dH-Sr2"/>
                             <constraint firstAttribute="trailing" secondItem="81I-Og-w5Q" secondAttribute="trailing" id="DIm-Rr-0y5"/>
+                            <constraint firstItem="uud-vL-gGg" firstAttribute="centerX" secondItem="Sj1-6R-Va9" secondAttribute="centerX" id="DxT-Kw-XZh"/>
                             <constraint firstItem="qLD-aw-ayA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="FSl-JT-45D"/>
                             <constraint firstAttribute="trailing" secondItem="qLD-aw-ayA" secondAttribute="trailing" id="JTc-1Q-UBp"/>
+                            <constraint firstItem="Sj1-6R-Va9" firstAttribute="leading" secondItem="5sA-eO-gPY" secondAttribute="trailing" constant="15" id="Lem-gR-SAw"/>
+                            <constraint firstItem="MrT-42-YUk" firstAttribute="leading" secondItem="Vb2-F6-QuD" secondAttribute="trailing" constant="66" id="NjU-el-sP2"/>
+                            <constraint firstItem="uud-vL-gGg" firstAttribute="top" secondItem="Sj1-6R-Va9" secondAttribute="bottom" constant="35" id="PTj-jw-g1W"/>
+                            <constraint firstItem="uud-vL-gGg" firstAttribute="centerX" secondItem="ScH-I1-XNo" secondAttribute="centerX" id="PVn-Wi-Kjo"/>
                             <constraint firstItem="81I-Og-w5Q" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="QLP-9U-cVe"/>
                             <constraint firstItem="5sA-eO-gPY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="UAy-xm-0SO"/>
                             <constraint firstItem="MrT-42-YUk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="VBG-Xy-Hoa"/>
                             <constraint firstItem="qLD-aw-ayA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="VhE-Hc-dGi"/>
+                            <constraint firstItem="81I-Og-w5Q" firstAttribute="top" secondItem="rdr-ja-9ZA" secondAttribute="bottom" constant="26" id="X8o-qp-Cba"/>
                             <constraint firstItem="5sA-eO-gPY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aVO-iS-P0R"/>
+                            <constraint firstItem="uud-vL-gGg" firstAttribute="width" secondItem="Sj1-6R-Va9" secondAttribute="height" multiplier="123:44" id="bPT-e0-bg7"/>
                             <constraint firstItem="81I-Og-w5Q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dqK-3H-hFT"/>
                             <constraint firstItem="1OY-8A-giT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="g0w-ee-duZ"/>
+                            <constraint firstItem="g0X-kZ-zn2" firstAttribute="top" secondItem="Sj1-6R-Va9" secondAttribute="bottom" constant="422" id="i0F-xs-rei"/>
                             <constraint firstAttribute="trailing" secondItem="1OY-8A-giT" secondAttribute="trailing" id="jst-kC-E25"/>
+                            <constraint firstAttribute="bottom" secondItem="ScH-I1-XNo" secondAttribute="bottom" constant="211" id="kcR-in-uFs"/>
+                            <constraint firstItem="Vb2-F6-QuD" firstAttribute="top" secondItem="1OY-8A-giT" secondAttribute="bottom" constant="60" id="mRX-sg-d94"/>
                             <constraint firstAttribute="bottom" secondItem="5sA-eO-gPY" secondAttribute="bottom" id="nxu-ad-XIF"/>
+                            <constraint firstItem="g0X-kZ-zn2" firstAttribute="leading" secondItem="5sA-eO-gPY" secondAttribute="trailing" constant="15" id="pf1-j9-U2z"/>
+                            <constraint firstItem="Vb2-F6-QuD" firstAttribute="leading" secondItem="5sA-eO-gPY" secondAttribute="trailing" constant="67" id="qTt-Tl-Bos"/>
+                            <constraint firstItem="Sj1-6R-Va9" firstAttribute="top" secondItem="1OY-8A-giT" secondAttribute="bottom" constant="102" id="rki-Mk-92p"/>
+                            <constraint firstItem="MrT-42-YUk" firstAttribute="leading" secondItem="Sj1-6R-Va9" secondAttribute="trailing" constant="15" id="u66-ZB-GZr"/>
+                            <constraint firstItem="rdr-ja-9ZA" firstAttribute="top" secondItem="Sj1-6R-Va9" secondAttribute="bottom" constant="422" id="vSB-5f-Xbu"/>
                             <constraint firstItem="1OY-8A-giT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wq5-dH-zdI"/>
+                            <constraint firstItem="81I-Og-w5Q" firstAttribute="top" secondItem="g0X-kZ-zn2" secondAttribute="bottom" constant="26" id="zuI-mb-1v3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="bottomWall" destination="81I-Og-w5Q" id="5x2-eT-wOb"/>
-                        <outlet property="leftWall" destination="5sA-eO-gPY" id="pWI-Fd-d3u"/>
-                        <outlet property="player" destination="ScH-I1-XNo" id="sMZ-rg-yNn"/>
-                        <outlet property="rightWall" destination="MrT-42-YUk" id="phU-8U-x67"/>
-                        <outlet property="topWall" destination="1OY-8A-giT" id="IOh-RR-qyO"/>
+                        <outlet property="bottomWall" destination="81I-Og-w5Q" id="4kj-4X-xec"/>
+                        <outlet property="enemyImage" destination="Vb2-F6-QuD" id="hVi-aB-dcN"/>
+                        <outlet property="gameoverLabel" destination="Sj1-6R-Va9" id="Peb-Zg-cv6"/>
+                        <outlet property="helpItemHeart" destination="g0X-kZ-zn2" id="MrX-0S-0rE"/>
+                        <outlet property="helpItemStar" destination="rdr-ja-9ZA" id="HIR-K0-8xx"/>
+                        <outlet property="leftWall" destination="5sA-eO-gPY" id="Dme-iF-QbP"/>
+                        <outlet property="player" destination="ScH-I1-XNo" id="Uee-x8-RVO"/>
+                        <outlet property="returnBtn" destination="uud-vL-gGg" id="WDF-yb-gwo"/>
+                        <outlet property="rightWall" destination="MrT-42-YUk" id="uXg-pO-Ab4"/>
+                        <outlet property="topWall" destination="1OY-8A-giT" id="Adn-vc-whA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -89,6 +153,9 @@
     </scenes>
     <resources>
         <image name="background.jpg" width="600" height="338"/>
+        <image name="cloud.png" width="328" height="272"/>
+        <image name="heart.png" width="316" height="284"/>
         <image name="player.png" width="800" height="602"/>
+        <image name="star.png" width="120" height="119"/>
     </resources>
 </document>
