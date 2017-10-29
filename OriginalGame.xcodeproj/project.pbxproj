@@ -17,7 +17,7 @@
 		CC784A2A1F8B416E00AFA945 /* lightning.png in Resources */ = {isa = PBXBuildFile; fileRef = CC784A281F8B416E00AFA945 /* lightning.png */; };
 		CC784A2B1F8B416E00AFA945 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = CC784A291F8B416E00AFA945 /* star.png */; };
 		CC784A2D1F8B417500AFA945 /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = CC784A2C1F8B417500AFA945 /* heart.png */; };
-		CC784A331F8B462B00AFA945 /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC784A321F8B462B00AFA945 /* Enemy.swift */; };
+		CC784A331F8B462B00AFA945 /* Weapon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC784A321F8B462B00AFA945 /* Weapon.swift */; };
 		CCDC51F11FA5C7AF00B7A44F /* HelpItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDC51F01FA5C7AF00B7A44F /* HelpItem.swift */; };
 		CCDC51F31FA5C96A00B7A44F /* ExtensionJudgeIntersectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDC51F21FA5C96A00B7A44F /* ExtensionJudgeIntersectViewController.swift */; };
 		CCDC51F51FA5D1C600B7A44F /* cloud.png in Resources */ = {isa = PBXBuildFile; fileRef = CCDC51F41FA5D1C600B7A44F /* cloud.png */; };
@@ -36,7 +36,7 @@
 		CC784A281F8B416E00AFA945 /* lightning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lightning.png; sourceTree = "<group>"; };
 		CC784A291F8B416E00AFA945 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
 		CC784A2C1F8B417500AFA945 /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
-		CC784A321F8B462B00AFA945 /* Enemy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
+		CC784A321F8B462B00AFA945 /* Weapon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weapon.swift; sourceTree = "<group>"; };
 		CCDC51F01FA5C7AF00B7A44F /* HelpItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpItem.swift; sourceTree = "<group>"; };
 		CCDC51F21FA5C96A00B7A44F /* ExtensionJudgeIntersectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionJudgeIntersectViewController.swift; sourceTree = "<group>"; };
 		CCDC51F41FA5D1C600B7A44F /* cloud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloud.png; sourceTree = "<group>"; };
@@ -101,7 +101,7 @@
 			children = (
 				CC784A111F8B35F100AFA945 /* Main.storyboard */,
 				CC784A161F8B35F100AFA945 /* LaunchScreen.storyboard */,
-				CC784A321F8B462B00AFA945 /* Enemy.swift */,
+				CC784A321F8B462B00AFA945 /* Weapon.swift */,
 				CCDC51F01FA5C7AF00B7A44F /* HelpItem.swift */,
 			);
 			path = View;
@@ -204,7 +204,7 @@
 				CC784A101F8B35F100AFA945 /* MainViewController.swift in Sources */,
 				CCDC51F11FA5C7AF00B7A44F /* HelpItem.swift in Sources */,
 				CC784A0E1F8B35F100AFA945 /* AppDelegate.swift in Sources */,
-				CC784A331F8B462B00AFA945 /* Enemy.swift in Sources */,
+				CC784A331F8B462B00AFA945 /* Weapon.swift in Sources */,
 				CCDC51F31FA5C96A00B7A44F /* ExtensionJudgeIntersectViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,13 +8,13 @@
 
 import UIKit
 
-class Enemy : UIImageView {
+class Weapon : UIImageView {
     
     private var enemyNum:Int = 0
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.image = UIImage(named: "cloud.png")
+        self.image = UIImage(named: "lightning.png")
     }
     
     required init?(coder aDecoder: NSCoder) {
