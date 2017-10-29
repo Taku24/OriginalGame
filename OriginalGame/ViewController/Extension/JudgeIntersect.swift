@@ -28,26 +28,34 @@ extension MainViewController {
     
     private func judgeEnemy(){
         let isEnemy = player.frame.intersects(enemyImage.frame) ? true : false
-        if(isEnemy){
+        if(isEnemy && !isEnemyHidden){
             gameOver()
+        }
+        for weapon in weaponList {
+            if(player.frame.intersects(weapon.frame)){
+                weapon.isHidden = true
+                if(!weapon.getIsHidden()){
+                    weaponCount -= 1
+                }
+                weapon.setHidden()
+            }
+            if(weaponCount == 0){
+                gameClear()
+            }
         }
     }
     
     private func judgeHelpItem(){
         let isHeart = player.frame.intersects(helpItemHeart.frame) ? true : false
         let isStar = player.frame.intersects(helpItemStar.frame) ? true : false
-        if (isHeart){
-            helpItemHeart.isHidden = true
-        } else if(isStar){
-            helpItemStar.isHidden = true
+        if (isHeart || isStar){
+            isEnemyHidden = true
+            enemyImage.isHidden = isEnemyHidden
+            let dispatchTime = DispatchTime.now() + 5.0
+            DispatchQueue.main.asyncAfter( deadline: dispatchTime ) {
+                self.isEnemyHidden = false
+                self.enemyImage.isHidden = self.isEnemyHidden
+            }
         }
-    }
-    
-    private func gameOver(){
-        player.isHidden = true
-        gameoverLabel.isHidden = false
-        enemyImage.isHidden = true
-        returnBtn.isHidden = false
-        returnBtn.isEnabled = true
     }
 }

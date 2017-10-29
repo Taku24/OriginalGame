@@ -10,7 +10,8 @@ import UIKit
 
 class Weapon : UIImageView {
     
-    private var enemyNum:Int = 0
+    //0は隠れていない、1は隠れている
+    var viewHidden: Bool = false
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -21,8 +22,12 @@ class Weapon : UIImageView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func setUp(){
-        
+    func setHidden(){
+        viewHidden = true
+    }
+    
+    func getIsHidden() -> Bool{
+        return viewHidden
     }
     
 }

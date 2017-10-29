@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC275E2C1FA632DF00E8CB24 /* StateGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC275E2B1FA632DF00E8CB24 /* StateGame.swift */; };
 		CC784A0E1F8B35F100AFA945 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC784A0D1F8B35F100AFA945 /* AppDelegate.swift */; };
 		CC784A101F8B35F100AFA945 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC784A0F1F8B35F100AFA945 /* MainViewController.swift */; };
 		CC784A131F8B35F100AFA945 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC784A111F8B35F100AFA945 /* Main.storyboard */; };
@@ -19,11 +20,12 @@
 		CC784A2D1F8B417500AFA945 /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = CC784A2C1F8B417500AFA945 /* heart.png */; };
 		CC784A331F8B462B00AFA945 /* Weapon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC784A321F8B462B00AFA945 /* Weapon.swift */; };
 		CCDC51F11FA5C7AF00B7A44F /* HelpItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDC51F01FA5C7AF00B7A44F /* HelpItem.swift */; };
-		CCDC51F31FA5C96A00B7A44F /* ExtensionJudgeIntersectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDC51F21FA5C96A00B7A44F /* ExtensionJudgeIntersectViewController.swift */; };
+		CCDC51F31FA5C96A00B7A44F /* JudgeIntersect.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDC51F21FA5C96A00B7A44F /* JudgeIntersect.swift */; };
 		CCDC51F51FA5D1C600B7A44F /* cloud.png in Resources */ = {isa = PBXBuildFile; fileRef = CCDC51F41FA5D1C600B7A44F /* cloud.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC275E2B1FA632DF00E8CB24 /* StateGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateGame.swift; sourceTree = "<group>"; };
 		CC784A0A1F8B35F100AFA945 /* OriginalGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OriginalGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC784A0D1F8B35F100AFA945 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC784A0F1F8B35F100AFA945 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -38,7 +40,7 @@
 		CC784A2C1F8B417500AFA945 /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
 		CC784A321F8B462B00AFA945 /* Weapon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weapon.swift; sourceTree = "<group>"; };
 		CCDC51F01FA5C7AF00B7A44F /* HelpItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpItem.swift; sourceTree = "<group>"; };
-		CCDC51F21FA5C96A00B7A44F /* ExtensionJudgeIntersectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionJudgeIntersectViewController.swift; sourceTree = "<group>"; };
+		CCDC51F21FA5C96A00B7A44F /* JudgeIntersect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JudgeIntersect.swift; sourceTree = "<group>"; };
 		CCDC51F41FA5D1C600B7A44F /* cloud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloud.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -53,6 +55,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC275E2D1FA633E100E8CB24 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CCDC51F21FA5C96A00B7A44F /* JudgeIntersect.swift */,
+				CC275E2B1FA632DF00E8CB24 /* StateGame.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		CC784A011F8B35F100AFA945 = {
 			isa = PBXGroup;
 			children = (
@@ -111,7 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				CC784A0F1F8B35F100AFA945 /* MainViewController.swift */,
-				CCDC51F21FA5C96A00B7A44F /* ExtensionJudgeIntersectViewController.swift */,
+				CC275E2D1FA633E100E8CB24 /* Extension */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -205,7 +216,8 @@
 				CCDC51F11FA5C7AF00B7A44F /* HelpItem.swift in Sources */,
 				CC784A0E1F8B35F100AFA945 /* AppDelegate.swift in Sources */,
 				CC784A331F8B462B00AFA945 /* Weapon.swift in Sources */,
-				CCDC51F31FA5C96A00B7A44F /* ExtensionJudgeIntersectViewController.swift in Sources */,
+				CC275E2C1FA632DF00E8CB24 /* StateGame.swift in Sources */,
+				CCDC51F31FA5C96A00B7A44F /* JudgeIntersect.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
