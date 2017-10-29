@@ -28,7 +28,8 @@ class MainViewController: UIViewController {
     internal var move:Float = 0
     internal var isEnemyHidden:Bool = false
     
-    private var weaponTimer:Timer!
+    internal var gameTimer:Timer!
+    internal var timeCount:Int = 0
     internal var weaponCount:Int = 10
     internal var weaponList : [Weapon] = []
     
@@ -87,7 +88,6 @@ class MainViewController: UIViewController {
         
         player.frame = viewFrame
         move += 0.1
-        print(move)
         judgeIntersects()
     }
 
