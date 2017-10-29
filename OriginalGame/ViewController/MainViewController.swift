@@ -20,6 +20,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var helpItemHeart: HelpItem!
     @IBOutlet weak var helpItemStar: HelpItem!
     @IBOutlet weak var enemyImage: UIImageView!
+    @IBOutlet weak var timerLabel: UILabel!
     
     internal var screenWidth:CGFloat = 0.0
     internal var screenHeight:CGFloat = 0.0

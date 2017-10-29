@@ -31,6 +31,14 @@ extension MainViewController {
         
         timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(self.showHelpItem), userInfo: nil, repeats: true)
         timer.fire()
+        
+        gameTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.countTime), userInfo: nil, repeats: true)
+        gameTimer.fire()
+    }
+    
+    @objc func countTime(){
+        timeCount += 1
+        timerLabel.text = String(timeCount)
     }
     
     internal func gameReset(){
