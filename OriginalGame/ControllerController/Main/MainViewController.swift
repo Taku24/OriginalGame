@@ -20,7 +20,6 @@ class MainViewController: UIViewController {
     @IBOutlet weak var helpItemHeart: HelpItem!
     @IBOutlet weak var helpItemStar: HelpItem!
     @IBOutlet weak var enemyImage: UIImageView!
-    @IBOutlet weak var timerLabel: UILabel!
     
     internal var screenWidth:CGFloat = 0.0
     internal var screenHeight:CGFloat = 0.0
@@ -28,6 +27,9 @@ class MainViewController: UIViewController {
     
     internal var move:Float = 0
     internal var isEnemyHidden:Bool = false
+    
+    internal let userDefaults:UserDefaults = UserDefaults.standard
+    internal var enemyCount:Int = 0
     
     internal var gameTimer:Timer!
     internal var timeCount:Int = 0
@@ -44,7 +46,8 @@ class MainViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @IBAction func returnAction(_ sender: Any) {
+
+    @IBAction func returnAction(_ sender: UIButton) {
         gameReset()
         gameInit()
     }

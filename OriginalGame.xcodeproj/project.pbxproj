@@ -22,6 +22,8 @@
 		CCDC51F11FA5C7AF00B7A44F /* HelpItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDC51F01FA5C7AF00B7A44F /* HelpItem.swift */; };
 		CCDC51F31FA5C96A00B7A44F /* JudgeIntersect.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDC51F21FA5C96A00B7A44F /* JudgeIntersect.swift */; };
 		CCDC51F51FA5D1C600B7A44F /* cloud.png in Resources */ = {isa = PBXBuildFile; fileRef = CCDC51F41FA5D1C600B7A44F /* cloud.png */; };
+		CCFDD1A81FAB6A4F00E6E299 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFDD1A71FAB6A4F00E6E299 /* InitialViewController.swift */; };
+		CCFDD1AA1FAB70AE00E6E299 /* Constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFDD1A91FAB70AD00E6E299 /* Constans.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		CCDC51F01FA5C7AF00B7A44F /* HelpItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpItem.swift; sourceTree = "<group>"; };
 		CCDC51F21FA5C96A00B7A44F /* JudgeIntersect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JudgeIntersect.swift; sourceTree = "<group>"; };
 		CCDC51F41FA5D1C600B7A44F /* cloud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloud.png; sourceTree = "<group>"; };
+		CCFDD1A71FAB6A4F00E6E299 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		CCFDD1A91FAB70AD00E6E299 /* Constans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constans.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,15 +59,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CC275E2D1FA633E100E8CB24 /* ExtensionMainViewController */ = {
-			isa = PBXGroup;
-			children = (
-				CCDC51F21FA5C96A00B7A44F /* JudgeIntersect.swift */,
-				CC275E2B1FA632DF00E8CB24 /* StateGame.swift */,
-			);
-			path = ExtensionMainViewController;
-			sourceTree = "<group>";
-		};
 		CC784A011F8B35F100AFA945 = {
 			isa = PBXGroup;
 			children = (
@@ -84,12 +79,13 @@
 			isa = PBXGroup;
 			children = (
 				CC784A0D1F8B35F100AFA945 /* AppDelegate.swift */,
+				CC784A1F1F8B3CE400AFA945 /* Images */,
 				CC784A311F8B45D100AFA945 /* Model */,
 				CC784A2F1F8B45C400AFA945 /* View */,
-				CC784A301F8B45CB00AFA945 /* ViewController */,
-				CC784A1F1F8B3CE400AFA945 /* Images */,
+				CC784A301F8B45CB00AFA945 /* ControllerController */,
 				CC784A141F8B35F100AFA945 /* Assets.xcassets */,
 				CC784A191F8B35F100AFA945 /* Info.plist */,
+				CCFDD1A91FAB70AD00E6E299 /* Constans.swift */,
 			);
 			path = OriginalGame;
 			sourceTree = "<group>";
@@ -118,13 +114,13 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		CC784A301F8B45CB00AFA945 /* ViewController */ = {
+		CC784A301F8B45CB00AFA945 /* ControllerController */ = {
 			isa = PBXGroup;
 			children = (
-				CC784A0F1F8B35F100AFA945 /* MainViewController.swift */,
-				CC275E2D1FA633E100E8CB24 /* ExtensionMainViewController */,
+				CCFDD1AC1FAB774100E6E299 /* Initial */,
+				CCFDD1AB1FAB773500E6E299 /* Main */,
 			);
-			path = ViewController;
+			path = ControllerController;
 			sourceTree = "<group>";
 		};
 		CC784A311F8B45D100AFA945 /* Model */ = {
@@ -132,6 +128,24 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CCFDD1AB1FAB773500E6E299 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CC784A0F1F8B35F100AFA945 /* MainViewController.swift */,
+				CCDC51F21FA5C96A00B7A44F /* JudgeIntersect.swift */,
+				CC275E2B1FA632DF00E8CB24 /* StateGame.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		CCFDD1AC1FAB774100E6E299 /* Initial */ = {
+			isa = PBXGroup;
+			children = (
+				CCFDD1A71FAB6A4F00E6E299 /* InitialViewController.swift */,
+			);
+			path = Initial;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +227,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC784A101F8B35F100AFA945 /* MainViewController.swift in Sources */,
+				CCFDD1A81FAB6A4F00E6E299 /* InitialViewController.swift in Sources */,
+				CCFDD1AA1FAB70AE00E6E299 /* Constans.swift in Sources */,
 				CCDC51F11FA5C7AF00B7A44F /* HelpItem.swift in Sources */,
 				CC784A0E1F8B35F100AFA945 /* AppDelegate.swift in Sources */,
 				CC784A331F8B462B00AFA945 /* Weapon.swift in Sources */,

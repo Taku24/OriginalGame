@@ -11,6 +11,13 @@ import UIKit
 extension MainViewController {
     
     internal func gameInit(){
+        let defEnemyCount = userDefaults.integer(forKey: Constans.enemyCount)
+        if(defEnemyCount == nil){
+            enemyCount = 3
+        } else {
+            enemyCount = userDefaults.integer(forKey: Constans.enemyCount)
+        }
+        weaponCount = enemyCount
         screenWidth = UIScreen.main.bounds.width
         screenHeight = UIScreen.main.bounds.height
         player.center = CGPoint(x: screenWidth / 2, y: screenHeight / 2)
@@ -20,7 +27,7 @@ extension MainViewController {
         returnBtn.isHidden = true
         returnBtn.isEnabled = false
         
-        for i in 0..<10 {
+        for _ in 0..<enemyCount {
             let randX = Int(arc4random() % UInt32(screenWidth - 50))
             let randY = Int(arc4random() % UInt32(screenHeight - 100))
             let frame:CGRect = CGRect(x: randX, y: randY, width: 50, height: 50)
@@ -31,14 +38,6 @@ extension MainViewController {
         
         timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(self.showHelpItem), userInfo: nil, repeats: true)
         timer.fire()
-        
-        gameTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.countTime), userInfo: nil, repeats: true)
-        gameTimer.fire()
-    }
-    
-    @objc func countTime(){
-        timeCount += 1
-        timerLabel.text = String(timeCount)
     }
     
     internal func gameReset(){
@@ -47,7 +46,7 @@ extension MainViewController {
         }
         weaponList.removeAll()
         move = 0.0
-        weaponCount = 10
+        weaponCount = enemyCount
     }
     
     internal func gameClear(){
