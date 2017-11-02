@@ -36,7 +36,7 @@ extension MainViewController {
             self.view.addSubview(weapon)
         }
         
-        timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(self.showHelpItem), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(self.timerAction), userInfo: nil, repeats: true)
         timer.fire()
     }
     
@@ -47,6 +47,8 @@ extension MainViewController {
         weaponList.removeAll()
         move = 0.0
         weaponCount = enemyCount
+        hp = Constans.hp
+        hpProgressBar.setProgress(hp, animated: true)
     }
     
     internal func gameClear(){

@@ -22,6 +22,7 @@
 		CCDC51F11FA5C7AF00B7A44F /* HelpItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDC51F01FA5C7AF00B7A44F /* HelpItem.swift */; };
 		CCDC51F31FA5C96A00B7A44F /* JudgeIntersect.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDC51F21FA5C96A00B7A44F /* JudgeIntersect.swift */; };
 		CCDC51F51FA5D1C600B7A44F /* cloud.png in Resources */ = {isa = PBXBuildFile; fileRef = CCDC51F41FA5D1C600B7A44F /* cloud.png */; };
+		CCEBBD4A1FAB7C14007E71FD /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = CCEBBD491FAB7C14007E71FD /* start.png */; };
 		CCFDD1A81FAB6A4F00E6E299 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFDD1A71FAB6A4F00E6E299 /* InitialViewController.swift */; };
 		CCFDD1AA1FAB70AE00E6E299 /* Constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFDD1A91FAB70AD00E6E299 /* Constans.swift */; };
 /* End PBXBuildFile section */
@@ -44,6 +45,7 @@
 		CCDC51F01FA5C7AF00B7A44F /* HelpItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpItem.swift; sourceTree = "<group>"; };
 		CCDC51F21FA5C96A00B7A44F /* JudgeIntersect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JudgeIntersect.swift; sourceTree = "<group>"; };
 		CCDC51F41FA5D1C600B7A44F /* cloud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloud.png; sourceTree = "<group>"; };
+		CCEBBD491FAB7C14007E71FD /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start.png; sourceTree = "<group>"; };
 		CCFDD1A71FAB6A4F00E6E299 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		CCFDD1A91FAB70AD00E6E299 /* Constans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constans.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,7 +84,7 @@
 				CC784A1F1F8B3CE400AFA945 /* Images */,
 				CC784A311F8B45D100AFA945 /* Model */,
 				CC784A2F1F8B45C400AFA945 /* View */,
-				CC784A301F8B45CB00AFA945 /* ControllerController */,
+				CC784A301F8B45CB00AFA945 /* Controller */,
 				CC784A141F8B35F100AFA945 /* Assets.xcassets */,
 				CC784A191F8B35F100AFA945 /* Info.plist */,
 				CCFDD1A91FAB70AD00E6E299 /* Constans.swift */,
@@ -93,6 +95,7 @@
 		CC784A1F1F8B3CE400AFA945 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				CCEBBD491FAB7C14007E71FD /* start.png */,
 				CCDC51F41FA5D1C600B7A44F /* cloud.png */,
 				CC784A2C1F8B417500AFA945 /* heart.png */,
 				CC784A281F8B416E00AFA945 /* lightning.png */,
@@ -114,13 +117,13 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		CC784A301F8B45CB00AFA945 /* ControllerController */ = {
+		CC784A301F8B45CB00AFA945 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				CCFDD1AC1FAB774100E6E299 /* Initial */,
 				CCFDD1AB1FAB773500E6E299 /* Main */,
 			);
-			path = ControllerController;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		CC784A311F8B45D100AFA945 /* Model */ = {
@@ -209,6 +212,7 @@
 			files = (
 				CCDC51F51FA5D1C600B7A44F /* cloud.png in Resources */,
 				CC784A2D1F8B417500AFA945 /* heart.png in Resources */,
+				CCEBBD4A1FAB7C14007E71FD /* start.png in Resources */,
 				CC784A181F8B35F100AFA945 /* LaunchScreen.storyboard in Resources */,
 				CC784A271F8B3FDA00AFA945 /* background.jpg in Resources */,
 				CC784A151F8B35F100AFA945 /* Assets.xcassets in Resources */,

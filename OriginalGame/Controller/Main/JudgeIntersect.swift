@@ -48,7 +48,7 @@ extension MainViewController {
     private func judgeHelpItem(){
         let isHeart = player.frame.intersects(helpItemHeart.frame) ? true : false
         let isStar = player.frame.intersects(helpItemStar.frame) ? true : false
-        if (isHeart || isStar){
+        if (isStar){
             isEnemyHidden = true
             enemyImage.isHidden = isEnemyHidden
             let dispatchTime = DispatchTime.now() + 5.0
@@ -56,6 +56,9 @@ extension MainViewController {
                 self.isEnemyHidden = false
                 self.enemyImage.isHidden = self.isEnemyHidden
             }
+        } else if(isHeart){
+            hp = Constans.hp
+            hpProgressBar.setProgress(hp, animated: true)
         }
     }
 }

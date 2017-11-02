@@ -20,6 +20,9 @@ class MainViewController: UIViewController {
     @IBOutlet weak var helpItemHeart: HelpItem!
     @IBOutlet weak var helpItemStar: HelpItem!
     @IBOutlet weak var enemyImage: UIImageView!
+    @IBOutlet weak var hpProgressBar: UIProgressView!
+    
+    internal var hp:Float = Constans.hp
     
     internal var screenWidth:CGFloat = 0.0
     internal var screenHeight:CGFloat = 0.0
@@ -52,7 +55,7 @@ class MainViewController: UIViewController {
         gameInit()
     }
     
-    @objc func showHelpItem(){
+    @objc func timerAction(){
         let itemNum : Int = Int(arc4random() % 3)
         switch itemNum {
         case 0:
@@ -72,6 +75,11 @@ class MainViewController: UIViewController {
             
         default:
             break
+        }
+        hp -= 2.0
+        hpProgressBar.setProgress(hp, animated: true)
+        if(hp == 0.0){
+            gameOver()
         }
     }
     
@@ -93,6 +101,12 @@ class MainViewController: UIViewController {
         player.frame = viewFrame
         move += 0.1
         judgeIntersects()
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if(enemyCount != 0){
+            gameOver()
+        }
     }
 
 }
