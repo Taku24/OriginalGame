@@ -7,10 +7,9 @@
 //
 
 import UIKit
+import AVFoundation
 
 class HelpItem : UIImageView {
-    
-    private var timer : Timer!
     
     override init(frame: CGRect) {
         super.init(frame: frame)

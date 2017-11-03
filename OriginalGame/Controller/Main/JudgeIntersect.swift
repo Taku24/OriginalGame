@@ -36,6 +36,7 @@ extension MainViewController {
                 weapon.isHidden = true
                 if(!weapon.getIsHidden()){
                     weaponCount -= 1
+                    playSounds()
                 }
                 weapon.setHidden()
             }

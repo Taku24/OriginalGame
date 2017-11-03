@@ -11,15 +11,9 @@ import UIKit
 extension MainViewController {
     
     internal func gameInit(){
-        let defEnemyCount = userDefaults.integer(forKey: Constans.enemyCount)
-        if(defEnemyCount == nil){
-            enemyCount = 3
-        } else {
-            enemyCount = userDefaults.integer(forKey: Constans.enemyCount)
-        }
+        enemyCount = userDefaults.integer(forKey: Constans.enemyCount)
+        setSounds(flag: 0)
         weaponCount = enemyCount
-        screenWidth = UIScreen.main.bounds.width
-        screenHeight = UIScreen.main.bounds.height
         player.center = CGPoint(x: screenWidth / 2, y: screenHeight / 2)
         player.isHidden = false
         enemyImage.isHidden = false
@@ -58,6 +52,8 @@ extension MainViewController {
         enemyImage.isHidden = true
         returnBtn.isHidden = false
         returnBtn.isEnabled = true
+        setSounds(flag: Constans.gameClear)
+        playSounds()
     }
     
     internal func gameOver(){
@@ -67,6 +63,8 @@ extension MainViewController {
         enemyImage.isHidden = true
         returnBtn.isHidden = false
         returnBtn.isEnabled = true
+        setSounds(flag: Constans.gameOver)
+        playSounds()
     }
     
 }

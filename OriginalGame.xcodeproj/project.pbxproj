@@ -23,6 +23,10 @@
 		CCDC51F31FA5C96A00B7A44F /* JudgeIntersect.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDC51F21FA5C96A00B7A44F /* JudgeIntersect.swift */; };
 		CCDC51F51FA5D1C600B7A44F /* cloud.png in Resources */ = {isa = PBXBuildFile; fileRef = CCDC51F41FA5D1C600B7A44F /* cloud.png */; };
 		CCEBBD4A1FAB7C14007E71FD /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = CCEBBD491FAB7C14007E71FD /* start.png */; };
+		CCEBBD511FAC76F0007E71FD /* se1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CCEBBD4E1FAC76F0007E71FD /* se1.mp3 */; };
+		CCEBBD521FAC76F0007E71FD /* gameclear.wav in Resources */ = {isa = PBXBuildFile; fileRef = CCEBBD4F1FAC76F0007E71FD /* gameclear.wav */; };
+		CCEBBD531FAC76F0007E71FD /* gameover.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CCEBBD501FAC76F0007E71FD /* gameover.mp3 */; };
+		CCEBBD551FAC7DED007E71FD /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEBBD541FAC7DED007E71FD /* Sounds.swift */; };
 		CCFDD1A81FAB6A4F00E6E299 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFDD1A71FAB6A4F00E6E299 /* InitialViewController.swift */; };
 		CCFDD1AA1FAB70AE00E6E299 /* Constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFDD1A91FAB70AD00E6E299 /* Constans.swift */; };
 /* End PBXBuildFile section */
@@ -46,6 +50,11 @@
 		CCDC51F21FA5C96A00B7A44F /* JudgeIntersect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JudgeIntersect.swift; sourceTree = "<group>"; };
 		CCDC51F41FA5D1C600B7A44F /* cloud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloud.png; sourceTree = "<group>"; };
 		CCEBBD491FAB7C14007E71FD /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start.png; sourceTree = "<group>"; };
+		CCEBBD4C1FAC769A007E71FD /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		CCEBBD4E1FAC76F0007E71FD /* se1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = se1.mp3; path = ../../../../../Desktop/se1.mp3; sourceTree = "<group>"; };
+		CCEBBD4F1FAC76F0007E71FD /* gameclear.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = gameclear.wav; path = ../../../../../Desktop/gameclear.wav; sourceTree = "<group>"; };
+		CCEBBD501FAC76F0007E71FD /* gameover.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = gameover.mp3; path = ../../../../../Desktop/gameover.mp3; sourceTree = "<group>"; };
+		CCEBBD541FAC7DED007E71FD /* Sounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sounds.swift; sourceTree = "<group>"; };
 		CCFDD1A71FAB6A4F00E6E299 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		CCFDD1A91FAB70AD00E6E299 /* Constans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constans.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,6 +75,7 @@
 			children = (
 				CC784A0C1F8B35F100AFA945 /* OriginalGame */,
 				CC784A0B1F8B35F100AFA945 /* Products */,
+				CCEBBD4B1FAC769A007E71FD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,6 +90,7 @@
 		CC784A0C1F8B35F100AFA945 /* OriginalGame */ = {
 			isa = PBXGroup;
 			children = (
+				CCEBBD4D1FAC76DD007E71FD /* sounds */,
 				CC784A0D1F8B35F100AFA945 /* AppDelegate.swift */,
 				CC784A1F1F8B3CE400AFA945 /* Images */,
 				CC784A311F8B45D100AFA945 /* Model */,
@@ -133,12 +144,31 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		CCEBBD4B1FAC769A007E71FD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CCEBBD4C1FAC769A007E71FD /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CCEBBD4D1FAC76DD007E71FD /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				CCEBBD4F1FAC76F0007E71FD /* gameclear.wav */,
+				CCEBBD501FAC76F0007E71FD /* gameover.mp3 */,
+				CCEBBD4E1FAC76F0007E71FD /* se1.mp3 */,
+			);
+			path = sounds;
+			sourceTree = "<group>";
+		};
 		CCFDD1AB1FAB773500E6E299 /* Main */ = {
 			isa = PBXGroup;
 			children = (
 				CC784A0F1F8B35F100AFA945 /* MainViewController.swift */,
 				CCDC51F21FA5C96A00B7A44F /* JudgeIntersect.swift */,
 				CC275E2B1FA632DF00E8CB24 /* StateGame.swift */,
+				CCEBBD541FAC7DED007E71FD /* Sounds.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -212,9 +242,12 @@
 			files = (
 				CCDC51F51FA5D1C600B7A44F /* cloud.png in Resources */,
 				CC784A2D1F8B417500AFA945 /* heart.png in Resources */,
+				CCEBBD521FAC76F0007E71FD /* gameclear.wav in Resources */,
 				CCEBBD4A1FAB7C14007E71FD /* start.png in Resources */,
 				CC784A181F8B35F100AFA945 /* LaunchScreen.storyboard in Resources */,
 				CC784A271F8B3FDA00AFA945 /* background.jpg in Resources */,
+				CCEBBD511FAC76F0007E71FD /* se1.mp3 in Resources */,
+				CCEBBD531FAC76F0007E71FD /* gameover.mp3 in Resources */,
 				CC784A151F8B35F100AFA945 /* Assets.xcassets in Resources */,
 				CC784A211F8B3D3C00AFA945 /* player.png in Resources */,
 				CC784A2B1F8B416E00AFA945 /* star.png in Resources */,
@@ -236,6 +269,7 @@
 				CCDC51F11FA5C7AF00B7A44F /* HelpItem.swift in Sources */,
 				CC784A0E1F8B35F100AFA945 /* AppDelegate.swift in Sources */,
 				CC784A331F8B462B00AFA945 /* Weapon.swift in Sources */,
+				CCEBBD551FAC7DED007E71FD /* Sounds.swift in Sources */,
 				CC275E2C1FA632DF00E8CB24 /* StateGame.swift in Sources */,
 				CCDC51F31FA5C96A00B7A44F /* JudgeIntersect.swift in Sources */,
 			);

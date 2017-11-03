@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class MainViewController: UIViewController {
     
@@ -39,9 +40,16 @@ class MainViewController: UIViewController {
     internal var weaponCount:Int = 10
     internal var weaponList : [Weapon] = []
     
+    internal var audio:AVAudioPlayer = AVAudioPlayer()
+    internal let se1 = Bundle.main.path(forResource: "se1", ofType: "mp3")
+    internal let seGameClear = Bundle.main.path(forResource: "gameclear", ofType: "wav")
+    internal let seGameOver = Bundle.main.path(forResource: "gameover", ofType: "mp3")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        screenWidth = UIScreen.main.bounds.width
+        screenHeight = UIScreen.main.bounds.height
         gameInit()
     }
 
@@ -76,9 +84,9 @@ class MainViewController: UIViewController {
         default:
             break
         }
-        hp -= 2.0
+        hp -= 0.1
         hpProgressBar.setProgress(hp, animated: true)
-        if(hp == 0.0){
+        if(hp <= 0.0){
             gameOver()
         }
     }
@@ -110,4 +118,3 @@ class MainViewController: UIViewController {
     }
 
 }
-

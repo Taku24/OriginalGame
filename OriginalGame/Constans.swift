@@ -14,5 +14,11 @@ struct Constans {
     static let enemyCount:String = "enemyCount"
     static let highScore:String = "highScore"
     
-    static let hp:Float = 20.0
+    //HP
+    static let hp:Float = 1.0
+    
+    //GameSounds
+    static let se1:Int = 0
+    static let gameClear:Int = 1
+    static let gameOver:Int = 2
 }
