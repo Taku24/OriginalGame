@@ -37,7 +37,7 @@ extension MainViewController {
                 weapon.isHidden = true
                 if(!weapon.getIsHidden()){
                     weaponCount -= 1
-                    playSounds()
+                    playSE1()
                 }
                 weapon.setHidden()
             }
@@ -51,6 +51,9 @@ extension MainViewController {
         let isHeart:Bool = player.frame.intersects(helpItemHeart.frame) ? true : false
         let isStar:Bool = player.frame.intersects(helpItemStar.frame) ? true : false
         if (isStar){
+            setSounds(flag: Constans.starItem)
+            playSounds()
+            helpItemStar.isHidden = true
             isEnemyHidden = true
             enemyImage.isHidden = isEnemyHidden
             let dispatchTime = DispatchTime.now() + 5.0
@@ -59,6 +62,9 @@ extension MainViewController {
                 self.enemyImage.isHidden = self.isEnemyHidden
             }
         } else if(isHeart){
+            setSounds(flag: Constans.heartItem)
+            playSounds()
+            helpItemHeart.isHidden = true
             hp = Constans.hp
             hpProgressBar.setProgress(hp, animated: true)
         }

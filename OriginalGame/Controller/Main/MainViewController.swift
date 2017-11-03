@@ -13,12 +13,15 @@ import AVFoundation
 class MainViewController: UIViewController {
     
     @IBOutlet weak var player: UIImageView!
+    
     @IBOutlet weak var topWall: UIView!
     @IBOutlet weak var leftWall: UIView!
     @IBOutlet weak var rightWall: UIView!
     @IBOutlet weak var bottomWall: UIView!
+    
     @IBOutlet weak var gameStatusLabel: UILabel!
     @IBOutlet weak var returnBtn: UIButton!
+    
     @IBOutlet weak var helpItemHeart: HelpItem!
     @IBOutlet weak var helpItemStar: HelpItem!
     @IBOutlet weak var enemyImage: UIImageView!
@@ -43,9 +46,12 @@ class MainViewController: UIViewController {
     internal var weaponList : [Weapon] = []
     
     internal var audio:AVAudioPlayer = AVAudioPlayer()
+    internal var se1Auduio:AVAudioPlayer = AVAudioPlayer()
     internal let se1:String = Bundle.main.path(forResource: "se1", ofType: "mp3")!
     internal let seGameClear:String = Bundle.main.path(forResource: "gameclear", ofType: "wav")!
     internal let seGameOver:String = Bundle.main.path(forResource: "gameover", ofType: "mp3")!
+    internal let seHeartItem:String = Bundle.main.path(forResource: "repair", ofType: "mp3")!
+    internal let seStarItem:String = Bundle.main.path(forResource: "wind", ofType: "mp3")!
     
     override func viewDidLoad() {
         super.viewDidLoad()

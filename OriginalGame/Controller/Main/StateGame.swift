@@ -13,7 +13,7 @@ extension MainViewController {
     
     internal func gameInit(){
         enemyCount = userDefaults.integer(forKey: Constans.enemyCount)
-        setSounds(flag: 0)
+        setSE1()
         weaponCount = enemyCount
         player.center = CGPoint(x: screenWidth / 2, y: screenHeight / 2)
         player.isHidden = false
@@ -51,7 +51,7 @@ extension MainViewController {
         timer.invalidate()
         player.isHidden = true
         gameStatusLabel.isHidden = false
-        gameStatusLabel.text = "GAME CLEAR\nScore:\(move)"
+        gameStatusLabel.text = "GAME CLEAR\nScore:\(Constans.baseScore - move)"
         enemyImage.isHidden = true
         returnBtn.isHidden = false
         returnBtn.isEnabled = true
