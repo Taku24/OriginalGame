@@ -5,6 +5,7 @@
 //  Created by TAKU on 2017/10/30.
 //  Copyright © 2017年 taku. All rights reserved.
 //
+//ゲームの状態(初期化、リセットなど)を管理
 
 import UIKit
 
@@ -22,8 +23,8 @@ extension MainViewController {
         returnBtn.isEnabled = false
         
         for _ in 0..<enemyCount {
-            let randX = Int(arc4random() % UInt32(screenWidth - 50))
-            let randY = Int(arc4random() % UInt32(screenHeight - 100))
+            let randX:Int = Int(arc4random() % UInt32(screenWidth - 50))
+            let randY:Int = Int(arc4random() % UInt32(screenHeight - 100))
             let frame:CGRect = CGRect(x: randX, y: randY, width: 50, height: 50)
             let weapon:Weapon = Weapon(frame: frame)
             weaponList.append(weapon)

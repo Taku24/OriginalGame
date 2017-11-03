@@ -27,6 +27,7 @@
 		CCEBBD521FAC76F0007E71FD /* gameclear.wav in Resources */ = {isa = PBXBuildFile; fileRef = CCEBBD4F1FAC76F0007E71FD /* gameclear.wav */; };
 		CCEBBD531FAC76F0007E71FD /* gameover.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CCEBBD501FAC76F0007E71FD /* gameover.mp3 */; };
 		CCEBBD551FAC7DED007E71FD /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEBBD541FAC7DED007E71FD /* Sounds.swift */; };
+		CCEBBD591FACA656007E71FD /* TouchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEBBD581FACA656007E71FD /* TouchScreen.swift */; };
 		CCFDD1A81FAB6A4F00E6E299 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFDD1A71FAB6A4F00E6E299 /* InitialViewController.swift */; };
 		CCFDD1AA1FAB70AE00E6E299 /* Constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFDD1A91FAB70AD00E6E299 /* Constans.swift */; };
 /* End PBXBuildFile section */
@@ -55,6 +56,7 @@
 		CCEBBD4F1FAC76F0007E71FD /* gameclear.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = gameclear.wav; path = ../../../../../Desktop/gameclear.wav; sourceTree = "<group>"; };
 		CCEBBD501FAC76F0007E71FD /* gameover.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = gameover.mp3; path = ../../../../../Desktop/gameover.mp3; sourceTree = "<group>"; };
 		CCEBBD541FAC7DED007E71FD /* Sounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sounds.swift; sourceTree = "<group>"; };
+		CCEBBD581FACA656007E71FD /* TouchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchScreen.swift; sourceTree = "<group>"; };
 		CCFDD1A71FAB6A4F00E6E299 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		CCFDD1A91FAB70AD00E6E299 /* Constans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constans.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -169,6 +171,7 @@
 				CCDC51F21FA5C96A00B7A44F /* JudgeIntersect.swift */,
 				CC275E2B1FA632DF00E8CB24 /* StateGame.swift */,
 				CCEBBD541FAC7DED007E71FD /* Sounds.swift */,
+				CCEBBD581FACA656007E71FD /* TouchScreen.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				CC784A0E1F8B35F100AFA945 /* AppDelegate.swift in Sources */,
 				CC784A331F8B462B00AFA945 /* Weapon.swift in Sources */,
 				CCEBBD551FAC7DED007E71FD /* Sounds.swift in Sources */,
+				CCEBBD591FACA656007E71FD /* TouchScreen.swift in Sources */,
 				CC275E2C1FA632DF00E8CB24 /* StateGame.swift in Sources */,
 				CCDC51F31FA5C96A00B7A44F /* JudgeIntersect.swift in Sources */,
 			);

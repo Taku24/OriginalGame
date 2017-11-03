@@ -5,6 +5,7 @@
 //  Created by TAKU on 2017/10/09.
 //  Copyright © 2017年 taku. All rights reserved.
 //
+// 変数、Outlet関連
 
 import UIKit
 import AVFoundation
@@ -41,9 +42,9 @@ class MainViewController: UIViewController {
     internal var weaponList : [Weapon] = []
     
     internal var audio:AVAudioPlayer = AVAudioPlayer()
-    internal let se1 = Bundle.main.path(forResource: "se1", ofType: "mp3")
-    internal let seGameClear = Bundle.main.path(forResource: "gameclear", ofType: "wav")
-    internal let seGameOver = Bundle.main.path(forResource: "gameover", ofType: "mp3")
+    internal let se1:String = Bundle.main.path(forResource: "se1", ofType: "mp3")!
+    internal let seGameClear:String = Bundle.main.path(forResource: "gameclear", ofType: "wav")!
+    internal let seGameOver:String = Bundle.main.path(forResource: "gameover", ofType: "mp3")!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,31 +91,4 @@ class MainViewController: UIViewController {
             gameOver()
         }
     }
-    
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let touchEvent = touches.first!
-        
-        let preDx = touchEvent.previousLocation(in: self.view).x
-        let preDy = touchEvent.previousLocation(in: self.view).y
-        let newDx = touchEvent.location(in: self.view).x
-        let newDy = touchEvent.location(in: self.view).y
-        
-        let dx = newDx - preDx
-        let dy = newDy - preDy
-        
-        var viewFrame: CGRect = player.frame
-        viewFrame.origin.x += dx
-        viewFrame.origin.y += dy
-        
-        player.frame = viewFrame
-        move += 0.1
-        judgeIntersects()
-    }
-    
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if(enemyCount != 0){
-            gameOver()
-        }
-    }
-
 }

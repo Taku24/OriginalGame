@@ -5,6 +5,7 @@
 //  Created by TAKU on 2017/10/29.
 //  Copyright © 2017年 taku. All rights reserved.
 //
+//衝突判定
 
 import UIKit
 
@@ -17,17 +18,17 @@ extension MainViewController {
     }
     
     private func judgeWall(){
-        let isTop = player.frame.intersects(topWall.frame) ? true : false
-        let isBottom = player.frame.intersects(bottomWall.frame) ? true : false
-        let isLeft = player.frame.intersects(leftWall.frame) ? true : false
-        let isRight = player.frame.intersects(rightWall.frame) ? true : false
+        let isTop:Bool = player.frame.intersects(topWall.frame) ? true : false
+        let isBottom:Bool = player.frame.intersects(bottomWall.frame) ? true : false
+        let isLeft:Bool = player.frame.intersects(leftWall.frame) ? true : false
+        let isRight:Bool = player.frame.intersects(rightWall.frame) ? true : false
         if(isTop || isBottom || isLeft || isRight){
             gameOver()
         }
     }
     
     private func judgeEnemy(){
-        let isEnemy = player.frame.intersects(enemyImage.frame) ? true : false
+        let isEnemy:Bool = player.frame.intersects(enemyImage.frame) ? true : false
         if(isEnemy && !isEnemyHidden){
             gameOver()
         }
@@ -47,8 +48,8 @@ extension MainViewController {
     }
     
     private func judgeHelpItem(){
-        let isHeart = player.frame.intersects(helpItemHeart.frame) ? true : false
-        let isStar = player.frame.intersects(helpItemStar.frame) ? true : false
+        let isHeart:Bool = player.frame.intersects(helpItemHeart.frame) ? true : false
+        let isStar:Bool = player.frame.intersects(helpItemStar.frame) ? true : false
         if (isStar){
             isEnemyHidden = true
             enemyImage.isHidden = isEnemyHidden
