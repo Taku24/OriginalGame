@@ -25,6 +25,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var hpProgressBar: UIProgressView!
     
     internal var hp:Float = Constans.hp
+    internal var isClear:Bool = false
     
     internal var screenWidth:CGFloat = 0.0
     internal var screenHeight:CGFloat = 0.0

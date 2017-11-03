@@ -47,6 +47,8 @@ extension MainViewController {
     }
     
     internal func gameClear(){
+        isClear = true
+        timer.invalidate()
         player.isHidden = true
         gameStatusLabel.isHidden = false
         gameStatusLabel.text = "GAME CLEAR\nScore:\(move)"
@@ -58,14 +60,17 @@ extension MainViewController {
     }
     
     internal func gameOver(){
-        player.isHidden = true
-        gameStatusLabel.isHidden = false
-        gameStatusLabel.text = "GAME OVER"
-        enemyImage.isHidden = true
-        returnBtn.isHidden = false
-        returnBtn.isEnabled = true
-        setSounds(flag: Constans.gameOver)
-        playSounds()
+        if(!isClear){
+            timer.invalidate()
+            player.isHidden = true
+            gameStatusLabel.isHidden = false
+            gameStatusLabel.text = "GAME OVER"
+            enemyImage.isHidden = true
+            returnBtn.isHidden = false
+            returnBtn.isEnabled = true
+            setSounds(flag: Constans.gameOver)
+            playSounds()
+        }
     }
     
 }
