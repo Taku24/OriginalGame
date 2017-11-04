@@ -50,7 +50,7 @@ extension MainViewController {
     private func judgeHelpItem(){
         let isHeart:Bool = player.frame.intersects(helpItemHeart.frame) ? true : false
         let isStar:Bool = player.frame.intersects(helpItemStar.frame) ? true : false
-        if (isStar){
+        if (isStar && helpItemStar.isHidden == false){
             setSounds(flag: Constans.starItem)
             playSounds()
             helpItemStar.isHidden = true
@@ -61,7 +61,7 @@ extension MainViewController {
                 self.isEnemyHidden = false
                 self.enemyImage.isHidden = self.isEnemyHidden
             }
-        } else if(isHeart){
+        } else if(isHeart && helpItemHeart.isHidden == false){
             setSounds(flag: Constans.heartItem)
             playSounds()
             helpItemHeart.isHidden = true

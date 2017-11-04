@@ -17,7 +17,7 @@ struct Constans {
     static let hp:Float = 1.0
     
     //Score
-    static let baseScore:Float = 100
+    static let baseScore:Float = 100.0
     
     //GameSounds
     static let se1:Int = 0
